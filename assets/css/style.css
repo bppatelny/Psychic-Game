@@ -1,0 +1,21 @@
+html, body{
+	color: #003300;
+	font-size: 25px;
+	line-height: 40px;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    background-color: #008080;  
+    height: 100%;
+    padding-top: 5px;  	
+}
+
+.wrapper {
+	min-height: 100%;
+  	height: auto !important;
+  	height: 100%;
+  	margin: 0 auto -4em;
+}
+
+.instructions {
+	padding-top: 20px;
+}
+
