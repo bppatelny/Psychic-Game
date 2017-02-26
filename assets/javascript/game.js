@@ -12,19 +12,28 @@ var guessedLetters = [];
 
 document.onkeypress = function(event) {
     var userGuess = event.key;
+    guessedLetters.push(userGuess);
 
     if(userGuess === computerChoice){
         wins++;
+        alert('You Win!');
+        guessedLetters = [];
     }else{
         guesses--;
     }
 
     if(guesses === 0){
-        losses++
+        losses++;
+        alert('You Lost!');
+        guesses = 10;
+        guessesLeft = 10;
+        guessedLetters = [];
+
     }
 
     document.getElementById('wins').innerHTML = "Wins: " + wins;
     document.getElementById('losses').innerHTML = "Losses: " + losses;
-    document.getElementById('guesses').innerHTML = "Guesses left: " + guesses;
+    document.getElementById('guessLeft').innerHTML = "Guesses Left: " + guesses;
+    document.getElementById('guessedLetters').innerHTML = "Guessed Letters: " + guessedLetters.toString();
 
 }  
