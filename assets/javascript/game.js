@@ -18,11 +18,10 @@ document.onkeypress = function(event) {
         wins++;
         alert('You Win!');
         guessedLetters = [];
-    }else{
-        guesses--;
+    
     }
 
-    if(guesses === 0){
+    else if(guesses === 0){
         losses++;
         alert('You Lost!');
         guesses = 10;
@@ -31,9 +30,22 @@ document.onkeypress = function(event) {
 
     }
 
+    else{
+        guesses--;
+    
+
+    }
+
     document.getElementById('wins').innerHTML = "Wins: " + wins;
     document.getElementById('losses').innerHTML = "Losses: " + losses;
     document.getElementById('guessLeft').innerHTML = "Guesses Left: " + guesses;
     document.getElementById('guessedLetters').innerHTML = "Guessed Letters: " + guessedLetters.toString();
 
-}  
+}
+
+
+
+
+
+
+  
